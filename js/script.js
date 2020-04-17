@@ -15,8 +15,11 @@ const pageDiv = document.querySelector('.page');
 
 // Get the names of the students
 const nameOfStudents = document.querySelectorAll('.student-details h3');
-
-// Display the page with the correct amount of students being displayed.
+/*
+* Display the page with the correct amount of students being displayed.
+* @param {array} listItems - all the list items on the page.
+* @param {num} pageNumber - the current number of the page.
+*/
 function showPage(listItems, pageNumber) {
 	// consts that are only used in the function
 	const startIndex = (pageNumber * viewPerPage) - viewPerPage;
@@ -117,7 +120,7 @@ const submit = document.querySelector('#search-button');
  *  Filters through the list of students when the user interacts with the search box. 
  * @param {string} searchInput - accepts the value of the `#search-input`.
  * @param {array} nameOfStudents - accepts an array of student names.
- * @param {array} student - accepts an array of student list items.
+ * @param {array} students - accepts an array of student list items.
  ***/
 
 function searchListItems(searchInput, nameOfStudents, students) {
